@@ -1,0 +1,352 @@
+/**
+ * OVERVIEW
+ *
+ * This file describes the components that build up the site.
+ * From the inner layout to the font color, etc.
+ *
+ */
+
+
+ /**
+ * TABLE OF CONTENTS
+ *
+ * 1. BUTTONS
+ *
+ * 2. DIVIDER
+ *
+ * 3. HEADER
+ *
+ * 4. ABOUT
+ *
+ * 5. REVIEWS
+ *
+ * 6. CONTACT
+ *
+ * 7. FOOTER
+ *
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #BUTTON
+\*------------------------------------*/
+
+.button {
+  display:        inline-block;
+  text-transform: uppercase;
+  border:         .5px solid;
+  padding:        .5rem 1rem;
+  transition:     all .5s ease;
+}
+
+  .button--primary {
+    color:        #ffffff;
+    border-color: #ffffff;
+  }
+
+  .button--primary:hover {
+    text-decoration: none;
+    color:         #ffffff;
+    transform:       translateX(20px);
+  }
+
+  .button--secondary {
+    color:        #000000;
+    border-color: #000000;
+  }
+
+  .button--secondary:hover {
+    text-decoration: none;
+    color:         #000000;
+    letter-spacing:  3px;
+  }
+
+
+
+
+
+/*------------------------------------*\
+  #DIVIDER
+\*------------------------------------*/
+
+.divider {
+  position: relative;
+}
+
+  .divider::after {
+    content:    '';
+    position:   absolute;
+    height:     37px;
+    top:        50%;
+    left:       20px;
+    width:      100%;
+    background: linear-gradient(107.36deg, #FBD589 10.3%, #FE8B61 31.19%, #EA4A5E 64.83%, #552D47 94.74%);
+    z-index:    -1;
+  }
+
+
+
+
+
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+
+header {
+  background: linear-gradient(107.36deg, #FBD589 10.3%, #FE8B61 31.19%, #EA4A5E 64.83%, #552D47 94.74%);
+  min-height: 40vw;
+  position:   relative;
+  color:    #ffffff;
+}
+
+
+  .rotated {
+    writing-mode: vertical-rl;
+    transform:    rotate(-180deg);
+    font-size:    calc(14px + (23 - 14) * ((100vw - 768px) / (1920 - 768)));;
+  }
+
+  header h1 {
+    line-height: .85;
+  }
+
+  .header__shoe-container {
+    position:  relative;
+    z-index:   1;
+    max-width: 95%;
+    margin:    0 auto;
+  }
+
+
+/* TOOLTIP ICONS */
+
+    .tooltips {
+      position: absolute;
+      width:    13%;
+      z-index:  2;
+    }
+  
+      .first--tooltip {
+        top:  57%;
+        left: 4%;
+      }
+
+      .second--tooltip {
+        top:  52%;
+        left: 58%;
+      }
+
+      .third--tooltip {
+        top:  4%;
+        left: 74%;
+      }
+
+
+    /* TOOLTIP IMAGES */
+
+    .tooltip__container {
+      position:      absolute;
+      top:           0;
+      max-width:     30%;
+      background:  #ffffff;
+      padding:       5px;
+      border-radius: 10px;
+      z-index:       3;
+      visibility:    hidden;
+      transition:    all .3s ease;
+    }
+
+      .tooltip__container::after {
+          content:      "";
+          position:     absolute;
+          border-width: 10px;
+          border-style: solid;
+      }
+
+      .tooltip-w-down-arrow::after {
+        top:          100%;
+        left:         50%;
+        margin-left:  -10px;
+        border-color: white transparent transparent transparent;
+      }
+
+      .tooltip-w-right-arrow::after {
+        top:          50%;
+        left:         100%;
+        margin-top:   -10px;
+        border-color: transparent transparent transparent white;
+      }
+
+
+      .first--tooltip-image {
+        top:  21%;
+        left: -5%;
+      }
+
+      .second--tooltip-image {
+        top:  16%;
+        left: 49%;
+      }
+
+      .third--tooltip-image {
+        top:  -5%;
+        left: 41%;
+      }
+
+
+/* TOOLTIP ICON HOVER */
+
+      .first--tooltip:hover ~ .first--tooltip-image { visibility: visible; }
+
+      .second--tooltip:hover ~ .second--tooltip-image { visibility: visible; }
+
+      .third--tooltip:hover ~ .third--tooltip-image { visibility: visible; }
+
+
+@media (min-width: 768px) {
+
+  .header__content { margin-top: 2rem; }
+
+
+  .header__shoe-container {
+    position:  absolute;
+    bottom:    -20vh;
+    right:     -5%;
+    max-width: 70%;
+  }
+
+    .tooltip__container { padding: 10px; }
+
+}
+
+@media (min-width: 1046px) {
+
+  header { min-height: 42vw; }
+
+    .header__content { margin-top: 6rem; }
+
+    .header__shoe-container {
+      bottom:   -41%;
+      max-width: 67%;
+    }
+
+}
+
+
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+    .header__shoe-container { bottom: -18vh; }
+
+}
+
+
+
+
+
+/*------------------------------------*\
+  #ABOUT
+\*------------------------------------*/
+
+.about { margin-top: 1rem; }
+
+
+@media (min-width: 768px) {
+  
+  .about { margin-top : 5rem;}
+
+}
+
+
+
+
+
+/*------------------------------------*\
+  #REVIEWS
+\*------------------------------------*/
+
+.reviews { margin-top: 3rem; }
+
+
+/* CAROUSEL */
+  #carousel { margin-top: 2rem; }
+
+    .carousel-inner {
+      width:  80%;
+      margin: 0 auto;
+    }
+
+      .carousel-control-prev-icon { background-image: url('../assets/previous.svg'); }
+      
+      .carousel-control-next-icon { background-image: url('../assets/next.svg'); }
+
+      .carousel-control-next, .carousel-control-prev {
+        width:   auto;
+        padding: 0 15px;
+      }
+      
+      .carousel--stars {
+        width:          140px;
+        padding-bottom: 1rem;
+      }
+
+
+@media (min-width: 768px) {
+
+  .reviews--image { margin-top: -5rem; }
+
+}
+
+
+
+
+
+/*------------------------------------*\
+  #CONTACT
+\*------------------------------------*/
+
+.contact {
+  margin-top: 3rem;
+}
+
+  .contact--phone-number {
+    font-size:                   calc(70px + (200 - 70) * ((100vw - 320px) / (1920 - 320)));
+    -webkit-text-fill-color:   #ffffff;
+    -webkit-text-stroke-width:   1px;
+    -webkit-text-stroke-color: #000000;
+  }
+
+
+
+
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+footer { margin-top: 8rem; }
+
+  .social-icons {
+    display:    inline-block;
+    padding:    0 1rem 2rem;
+    transition: all .2s ease;
+  }
+
+  .social-icons:last-child { padding-right: 0; }
+
+  .social-icons:hover { filter: invert(54%) sepia(93%) saturate(367%) hue-rotate(325deg) brightness(102%) contrast(103%); }
+
+
+    footer small a {
+      display:     inline-block;
+      padding:     0 1rem 1rem;
+      color:     #000000;
+      font-weight: bold;
+    }
+
+    footer small a:hover { color: #000000; }

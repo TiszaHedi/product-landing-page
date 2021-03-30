@@ -1,0 +1,50 @@
+/**
+ * OVERVIEW
+ *
+ * The project is divided into separate style sheets:
+ *
+ * bootstrap.css............CSS rules that control the layout of the website.
+ * base.css..............Global rules and helpers.
+ * components.css........The CSS of components that build up the site.
+ */
+
+
+/**
+ * TABLE OF CONTENTS
+ *
+ * SETTINGS
+ * Base font-size.......Declaration of the base font-size.
+ *
+ * TYPOGRAPHY
+ * Headings............Typography styles.
+ */
+
+
+
+
+
+
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+
+html { 
+  font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.5;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #TYPOGRAPHY
+\*------------------------------------*/
+
+body { font-family: 'Montserrat', sans-serif; }
+
+h1, h2, h3, .contact--phone-number { font-family: 'Bebas Neue', cursive; }
+
+h1 { font-size: calc(100px + (200 - 100) * ((100vw - 320px) / (1920 - 320))); }
+
+h2 { font-size: calc(80px + (100 - 80) * ((100vw - 320px) / (1920 - 320))); }
