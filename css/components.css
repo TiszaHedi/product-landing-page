@@ -208,6 +208,10 @@ header {
 
       .third--tooltip:hover ~ .third--tooltip-image { visibility: visible; }
 
+      .first--tooltip:hover,
+      .second--tooltip:hover,
+      .third--tooltip:hover { filter: blur(1px); }
+
 
 @media (min-width: 768px) {
 
