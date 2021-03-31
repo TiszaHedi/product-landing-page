@@ -383,14 +383,12 @@ footer { margin-top: 8rem; }
     font-family:   inherit;
     display:       inline-block;
     border:        0;
-    border-bottom: 3px solid transparent;
     padding:       10px 0 10px 16px;
     margin-bottom: 2rem;
     outline:       none;
     width:         100%;
   }
 
-  .newsletter-form__input-field:focus { border-color: #FE8B61; }
 
 @media (min-width: 768px) {
 
