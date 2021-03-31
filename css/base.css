@@ -48,3 +48,5 @@ h1, h2, h3, .contact--phone-number { font-family: 'Bebas Neue', cursive; }
 h1 { font-size: calc(100px + (200 - 100) * ((100vw - 320px) / (1920 - 320))); }
 
 h2 { font-size: calc(80px + (100 - 80) * ((100vw - 320px) / (1920 - 320))); }
+
+h4 {font-size: calc(18px + (40 - 18) * ((100vw - 320px) / (1920 - 320))); }

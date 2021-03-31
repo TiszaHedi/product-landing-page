@@ -24,6 +24,7 @@
  *
  * 7. FOOTER
  *
+ * 8. NEWSLETTER
  */
 
 
@@ -39,7 +40,9 @@
   text-transform: uppercase;
   border:         .5px solid;
   padding:        .5rem 1rem;
-  transition:     all .5s ease;
+  margin-bottom:  2rem;
+  transition:      all .5s ease;
+  background:     transparent;
 }
 
   .button--primary {
@@ -241,7 +244,7 @@ header {
   and (max-height: 1366px) 
   and (-webkit-min-device-pixel-ratio: 1.5) {
 
-    .header__shoe-container { bottom: -18vh; }
+    .header__shoe-container { bottom: -44%; }
 
 }
 
@@ -285,10 +288,7 @@ header {
       
       .carousel-control-next-icon { background-image: url('../assets/next.svg'); }
 
-      .carousel-control-next, .carousel-control-prev {
-        width:   auto;
-        padding: 0 15px;
-      }
+      .carousel-control-next, .carousel-control-prev { width: auto; }
       
       .carousel--stars {
         width:          140px;
@@ -350,3 +350,51 @@ footer { margin-top: 8rem; }
     }
 
     footer small a:hover { color: #000000; }
+
+
+
+
+
+/*------------------------------------*\
+  #NEWSLETTER.HTML PAGE CSS STYLES
+\*------------------------------------*/
+
+.newsletter {
+  background:          url('../assets/contact-page/shoe-background-element.svg'), linear-gradient(107.36deg, #FBD589 10.3%, #FE8B61 31.19%, #EA4A5E 64.83%, #552D47 94.74%);
+  background-repeat:   no-repeat;
+  background-position: left bottom;
+  background-size:     cover;
+  position:            relative;
+  min-height:          100vh;
+  color:             #ffffff;
+}
+
+  .newsletter h1 { 
+    line-height: 1;
+    font-size:   calc(80px + (200 - 80) * ((100vw - 320px) / (1920 - 320)));;
+  }
+
+
+  .newsletter-form__input-field {
+    font-family:   inherit;
+    display:       inline-block;
+    border:        0;
+    border-bottom: 3px solid transparent;
+    padding:       10px 0 10px 16px;
+    margin-bottom: 2rem;
+    outline:       none;
+    width:         100%;
+  }
+
+  .newsletter-form__input-field:focus { border-color: #FE8B61; }
+
+@media (min-width: 768px) {
+
+  .newsletter { background-size: auto; }
+  
+  .newsletter__form {
+    position: absolute;
+    padding:  20px 0 20px 26px;
+  }
+
+}
